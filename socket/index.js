@@ -1,12 +1,17 @@
 const app = require('express')();
+//const cors = require('cors');
+//const morgan = require('morgan');
 const server = require('http').createServer(app);
 const io = require('socket.io')(server, {
     cors: {
-        origin: true,
-        Credentials: true,
-        methods: 'GET,HEAD,PUT,PATCH,POST,DELETE'
+        origin: '*',
+        methods: 'GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH, CONNECT, TRACE, UPDATE',
+        allowedHeader: 'Content-Type, Authorization, Content-Length, X-Requested-With',
+        credentials: true,
+        maxAge: '3600'
     }
 });
+
 io.on('connection', (socket) => {
 
     socket.on('disconnect', function() {
@@ -21,9 +26,13 @@ io.on('connection', (socket) => {
         io.emit('message', { msg: message.text, user: socket.username, createdAt: new Date() });
     });
 });
+
 app.get('/', (req, res) => {
     res.send('<h1>Hello, This is a API of Chat</h1>');
 });
+
+//app.use(helmet());
+
 var port = process.env.PORT || 3001;
 server.listen(port, function() {
     console.log('listening in http://localhost:' + port);

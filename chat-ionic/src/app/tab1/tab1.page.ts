@@ -17,8 +17,10 @@ export class Tab1Page implements OnInit {
   constructor(private socket: Socket, private toastCtrl: ToastController) { }
  
   ngOnInit() {
+
     this.socket.connect();
- 
+      
+
     let name = `user-${new Date().getTime()}`;
     this.currentUser = name;
     
