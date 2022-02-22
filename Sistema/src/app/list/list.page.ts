@@ -30,6 +30,7 @@ export class ListPage implements OnInit {
         }
       )
     }
+    location.reload();
   }
 
 }

@@ -8,18 +8,18 @@
     <ion-list lines="full">
         <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
             <ion-item>
-                <ion-label position="floating">Numero</ion-label>
+                <ion-label position="floating">Nombre de la Habitación</ion-label>
                 <ion-input formControlName="numero" type="numero" required></ion-input>
             </ion-item>
 
             <ion-item>
-                <ion-label position="floating">Tipo</ion-label>
+                <ion-label position="floating">Tipo de habitacion</ion-label>
                 <ion-input formControlName="tipo" type="text" required>
                 </ion-input>
             </ion-item>
 
             <ion-item>
-                <ion-label position="floating">Estatus</ion-label>
+                <ion-label position="floating">Estatus de la Habitación</ion-label>
                 <ion-input formControlName="estatus" type="text" required>
                 </ion-input>
             </ion-item>

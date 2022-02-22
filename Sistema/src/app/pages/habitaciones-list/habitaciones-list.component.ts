@@ -30,6 +30,7 @@ export class HabitacionesListComponent implements OnInit {
         }
       )
     }
+    location.reload();
   }
 
 }

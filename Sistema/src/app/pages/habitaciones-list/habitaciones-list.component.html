@@ -7,23 +7,28 @@
 <ion-content>
 
     <ion-list>
+
         <ion-item *ngFor="let habitacion of Habitaciones">
             <ion-label>
-                <h2>{{habitacion.numero}}</h2>
+                <h2><b>Habitación:</b></h2>
+                <h3>{{habitacion.numero}}</h3>
+                <h2><b>Tipo:</b></h2>
                 <h3>{{habitacion.tipo}}</h3>
+                <h2><b>Estatus:</b></h2>
                 <h3>{{habitacion.estatus}}</h3>
+                <h2><b>Orden:</b></h2>
                 <h3>{{habitacion.orden}}</h3>
             </ion-label>
-
             <div class="item-note" item-end>
                 <button ion-button clear [routerLink]="['/update/', habitacion._id]">
-        <ion-icon name="create" style="zoom:1.5"></ion-icon>
-      </button>
+            <ion-icon name="create" style="zoom:1.5"></ion-icon>
+                </button>
                 <button ion-button clear (click)="removeUser(habitacion, i)">
-        <ion-icon name="trash" style="zoom:1.5"></ion-icon>
-      </button>
+            <ion-icon name="trash" style="zoom:1.5"></ion-icon>
+            </button>
             </div>
         </ion-item>
+        <ion-item-divider></ion-item-divider>
     </ion-list>
 
 </ion-content>
