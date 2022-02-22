@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Create Habitación</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list lines="full">
+        <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+            <ion-item>
+                <ion-label position="floating">Numero</ion-label>
+                <ion-input formControlName="numero" type="numero" required></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Tipo</ion-label>
+                <ion-input formControlName="tipo" type="text" required>
+                </ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Estatus</ion-label>
+                <ion-input formControlName="estatus" type="text" required>
+                </ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Orden</ion-label>
+                <ion-input formControlName="orden" type="text" required>
+                </ion-input>
+            </ion-item>
+
+            <ion-row>
+                <ion-col>
+                    <ion-button type="submit" color="danger" expand="block">Add</ion-button>
+                </ion-col>
+            </ion-row>
+        </form>
+    </ion-list>
+</ion-content>

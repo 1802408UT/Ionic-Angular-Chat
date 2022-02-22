@@ -1,0 +1,69 @@
+const express = require('express');
+const app = express();
+const habitacionRoute = express.Router();
+let HabitacionModel = require('../model/habitacion');
+
+
+habitacionRoute.route('/').get((req, res) => {
+  HabitacionModel.find((error, habitacion) => {
+    if (error) {
+      return next(error)
+    } else {
+      res.json(habitacion)
+      console.log('Habitacion retrieved!')
+    }
+  })
+})
+
+
+habitacionRoute.route('/create-habitacion').post((req, res, next) => {
+  HabitacionModel.create(req.body, (err, habitacion) => {
+    if (err) {
+      return next(err)
+    } else {
+      res.json(habitacion)
+      console.log('Habitacion created!')
+    }
+  })
+});
+
+
+habitacionRoute.route('/fetch-habitacion/:id').get((req, res) => {
+  HabitacionModel.findById(req.params.id, (err, habitacion) => {
+    if (err) {
+      return next(err)
+    } else {
+      res.json(habitacion)
+      console.log('Habitacion retrieved!')
+    }
+  })
+})
+
+
+habitacionRoute.route('/update-habitacion/:id').put((req, res, next) => {
+  HabitacionModel.findByIdAndUpdate(req.params.id, {
+    $set: req.body
+  }, (err, habitacion) => {
+    if (err) {
+      return next(err);
+    } else {
+      res.json(habitacion)
+      console.log('Habitacion updated!')
+    }
+  })
+})
+
+habitacionRoute.route('/delete-habitacion/:id').delete((req, res, next) => {
+  HabitacionModel.findByIdAndRemove(req.params.id, (error, habitacion) => {
+    if (error) {
+      return next(error);
+    } else {
+      res.status(200).json({
+        msg: habitacion
+      })
+      console.log('Habitacion deleted!')
+    }
+  })
+})
+
+module.exports = habitacionRoute;
