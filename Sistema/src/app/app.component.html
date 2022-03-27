@@ -1,3 +1,9 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-button class="w3-display-right" color="primary" routerLink="/login">Iniciar</ion-button>
+        <ion-button class="d-r" color="secondary" routerLink="/">Cerrar Sesión</ion-button>
+    </ion-toolbar>
+</ion-header>
 <ion-app>
     <ion-router-outlet></ion-router-outlet>
 </ion-app>
@@ -7,22 +13,22 @@
     <ion-tab-bar slot="bottom">
         <ion-tab-button routerLinkActive="tab-selected" routerLink="/list" tab="list">
             <ion-icon name="list-outline"></ion-icon>
-            <ion-label>Users List</ion-label>
+            <ion-label>Lista de Usuarios</ion-label>
         </ion-tab-button>
 
         <ion-tab-button routerLinkActive="tab-selected" routerLink="/create" tab="create">
             <ion-icon name="person-outline"></ion-icon>
-            <ion-label>Add User</ion-label>
+            <ion-label>Crear Usuario</ion-label>
         </ion-tab-button>
 
         <ion-tab-button routerLinkActive="tab-selected" routerLink="/create-habitaciones" tab="create-habitaciones">
             <ion-icon name="home"></ion-icon>
-            <ion-label>Add Habitación</ion-label>
+            <ion-label>Crear Habitación</ion-label>
         </ion-tab-button>
 
         <ion-tab-button routerLinkActive="tab-selected" routerLink="/habitaciones-list" tab="habitaciones-list">
             <ion-icon name="list-outline"></ion-icon>
-            <ion-label>Users List</ion-label>
+            <ion-label>Lista de Habitaciones</ion-label>
         </ion-tab-button>
     </ion-tab-bar>
 </ion-tabs>

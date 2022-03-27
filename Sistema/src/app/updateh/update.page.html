@@ -1,0 +1,43 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Actualizar Habitaciones</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+    <ion-list lines="full">
+        <form [formGroup]="updateUserFg" (ngSubmit)="onSubmit()">
+
+            <ion-item>
+                <ion-label position="floating">Numero de la Habitación</ion-label>
+                <ion-input formControlName="numero" type="text" required></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Tipo</ion-label>
+                <ion-input formControlName="tipo" type="text" required>
+                </ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Estatus de la habitación</ion-label>
+                <ion-input formControlName="estatus" type="text" required>
+                </ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Orden</ion-label>
+                <ion-input formControlName="Orden" type="text" required>
+                </ion-input>
+            </ion-item>
+
+            <ion-row>
+                <ion-col>
+                    <ion-button type="submit" color="success" expand="block">Update</ion-button>
+                </ion-col>
+            </ion-row>
+
+        </form>
+    </ion-list>
+</ion-content>

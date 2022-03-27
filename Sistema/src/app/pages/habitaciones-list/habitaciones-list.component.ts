@@ -10,7 +10,7 @@ export class HabitacionesListComponent implements OnInit {
 
  
   Habitaciones: any = [];
-
+  
   constructor( public habitacionCrudService: HabitacionCrudService ) { }
 
   ngOnInit() { }

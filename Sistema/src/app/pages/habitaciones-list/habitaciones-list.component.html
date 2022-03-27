@@ -1,6 +1,8 @@
 <ion-header>
     <ion-toolbar>
-        <ion-title>Habitaciones List</ion-title>
+        <ion-title>Habitaciones List
+        </ion-title>
+
     </ion-toolbar>
 </ion-header>
 
@@ -9,6 +11,11 @@
     <ion-list>
 
         <ion-item *ngFor="let habitacion of Habitaciones">
+            <ion-button class="w3-display-center" color="primary" [routerLink]="['/habitaciones', habitacion.numero]">
+                <ion-icon name="home"></ion-icon>
+                <ion-label>{{habitacion.numero}}</ion-label>
+            </ion-button>
+            <!--
             <ion-label>
                 <h2><b>Habitación:</b></h2>
                 <h3>{{habitacion.numero}}</h3>
@@ -19,14 +26,16 @@
                 <h2><b>Orden:</b></h2>
                 <h3>{{habitacion.orden}}</h3>
             </ion-label>
+            -->
             <div class="item-note" item-end>
-                <button ion-button clear [routerLink]="['/update/', habitacion._id]">
+                <button ion-button clear [routerLink]="['/updatehabitaciones/', habitacion._id]">
             <ion-icon name="create" style="zoom:1.5"></ion-icon>
                 </button>
                 <button ion-button clear (click)="removeUser(habitacion, i)">
             <ion-icon name="trash" style="zoom:1.5"></ion-icon>
             </button>
             </div>
+
         </ion-item>
         <ion-item-divider></ion-item-divider>
     </ion-list>

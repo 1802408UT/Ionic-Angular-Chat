@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 
-const config: SocketIoConfig = { url: 'http://192.168.1.66:3001', options: {
+const config: SocketIoConfig = { url: 'http://192.168.245.194:3001', options: {
   
 } };
 

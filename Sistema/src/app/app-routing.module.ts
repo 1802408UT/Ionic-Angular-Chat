@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '', 
-    redirectTo: 'create', 
+    redirectTo: 'habitaciones-list', 
     pathMatch: 'full'
   },
   {
@@ -27,6 +27,18 @@ const routes: Routes = [
     path: 'habitaciones-list',
     loadChildren: () => import('./pages/habitaciones-list/habitaciones-list.module').then( m => m.CreateHListPageModule)
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LogingModule)
+  },
+  {
+    path: 'habitaciones/:habitacionId',
+    loadChildren: () => import('./pages/habitaciones-list/habitacion/habitaciones-list-routing.module').then( m => m.HabitacionRoutingModule)
+  },
+  {
+    path: 'updatehabitaciones/:id',
+    loadChildren: () => import('./updateh/update.module').then( m => m.UpdatePageModule)
+  }
 ];
 
 @NgModule({
