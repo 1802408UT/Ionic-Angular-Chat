@@ -11,11 +11,18 @@ import { Habitacion } from '../../../models/habitacionmodel';
 })
 export class HabitacionComponent implements OnInit {
 
-  habitacion:any;
+  habitacion:undefined;
   Habitaciones:any;
   habitaciones:any;
   data: any;
   dat=false;
+
+    id:string;
+    numero:string;
+    tipo:string;
+    estatus:string;
+    orden:string;
+
   x = this.route.snapshot.params.habitacionId;
   constructor(
     private route: ActivatedRoute,
@@ -26,13 +33,20 @@ export class HabitacionComponent implements OnInit {
     this.habitacion = this.route.snapshot.params.habitacionId;
     this.habitacionCrudService.getUsers().subscribe((response) => {
       this.Habitaciones = response;
-      console.log(this.Habitaciones);
       this.habitaciones = this.Habitaciones.filter((habitacion) => habitacion.numero == this.habitacion);
       console.log(this.habitaciones);
-      this.insertar();  
+      console.log(this.habitaciones[0]._id);
+      this.id = this.habitaciones[0]._id.toString();
+      this.numero = this.habitaciones[0].numero.toString();
+      this.tipo = this.habitaciones[0].tipo.toString();
+      this.estatus = this.habitaciones[0].estatus.toString();
+      this.orden = this.habitaciones[0].orden.toString();
     });
   }
   insertar(){
+    
+  }
+  onclick(){
     
   }
 
