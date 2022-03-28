@@ -18,6 +18,7 @@ export class HabitacionesListComponent implements OnInit {
   ionViewDidEnter() {
     this.habitacionCrudService.getUsers().subscribe((response) => {
       this.Habitaciones = response;
+      console.log(this.Habitaciones);
     })
   }
 

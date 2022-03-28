@@ -1,7 +1,7 @@
 <ion-header>
     <ion-toolbar>
         <ion-title>
-            {{habitacion}}
+            {{habitacion1}}
         </ion-title>
     </ion-toolbar>
 </ion-header>
@@ -14,22 +14,15 @@
             <ion-label>{{numero}}</ion-label>
         </ion-item>
         <ion-item>
-            <ion-label>Estado actual: {{estatus}}</ion-label>
+            <ion-label>Estado actual:
+                <ion-badge color="primary">{{estatus}}</ion-badge>
+            </ion-label>
         </ion-item>
+        <button class="w3-button w3-hover-green w3-border" (click)="disponible()">Disponible</button>
+        <button class="w3-button w3-hover-blue w3-border" (click)="limpiando()">Limpiando</button>
+        <button class="w3-button w3-hover-red w3-border" (click)="ocupado()">Ocupado</button>
         <ion-item>
-            <ion-label>Disponible</ion-label>
-            <ion-checkbox color="primary" name="dis">Disponible</ion-checkbox>
-        </ion-item>
-        <ion-item>
-            <ion-label>Limpiando</ion-label>
-            <ion-checkbox color="secondary" name="lim">Limpiando</ion-checkbox>
-        </ion-item>
-        <ion-item>
-            <ion-label>Ocupado</ion-label>
-            <ion-checkbox color="danger" name="ocu">Ocupado</ion-checkbox>
-        </ion-item>
-        <ion-item>
-            <ion-label>{{orden}}}</ion-label>
+            <ion-label>{{orden}}</ion-label>
         </ion-item>
         <ion-item>
             <ion-button expand="round" color="primary">Editar</ion-button>
