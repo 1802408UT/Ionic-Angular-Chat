@@ -5,31 +5,27 @@
         </ion-title>
     </ion-toolbar>
 </ion-header>
-<ion-content>
-    <ion-list lines="full">
-        <ion-item>
-            <ion-label>{{id}}</ion-label>
-        </ion-item>
-        <ion-item>
-            <ion-label>{{numero}}</ion-label>
-        </ion-item>
-        <ion-item>
-            <ion-label>Estado actual:
-                <ion-badge color="primary">{{estatus}}</ion-badge>
-            </ion-label>
-        </ion-item>
-        <button class="w3-button w3-hover-green w3-border" (click)="disponible()">Disponible</button>
-        <button class="w3-button w3-hover-blue w3-border" (click)="limpiando()">Limpiando</button>
-        <button class="w3-button w3-hover-red w3-border" (click)="ocupado()">Ocupado</button>
-        <ion-item>
-            <ion-label>{{orden}}</ion-label>
-        </ion-item>
-        <ion-item>
-            <ion-button expand="round" color="primary">Editar</ion-button>
-        </ion-item>
-        <ion-item>
-            <ion-button expand="round" color="danger">Cancelar</ion-button>
-        </ion-item>
-    </ion-list>
+<!--HEDER-END's-->
+<form class="room">
+    <div class="room__info">
+        <label id="id">Numero de indentificación:</label>
+        <h3 class="info__id"> {{id}}</h3>
+        <label id="numero">Numero de habitación: </label>
+        <h3 class="info__numero"> {{numero}}</h3>
+        <label id="estatus">Estatus de la habitación:</label>
+        <h3 class="info__estatus"> {{estatus}}</h3>
+        <label id="orden">Orden de la habitación:</label>
+        <h3 class="info__orden"> {{orden}}</h3>
+    </div>
 
-</ion-content>
+    <section class="room__action">
+        <div class="action__edit">
+            <button id="action__disponible" class="btn" (click)="disponible()">Disponible</button>
+            <button id="action__limpiando" class="btn" (click)="limpiando()">Limpiando</button>
+            <button id="action__ocupado" class="btn" (click)="ocupado()">Ocupado</button>
+        </div>
+        <button id="action__editar" class="btn" (click)="ocupado()">Editar</button>
+        <button id="action__cancelar" class="btn" (click)="ocupado()">Cancelar</button>
+    </section>
+
+</form>

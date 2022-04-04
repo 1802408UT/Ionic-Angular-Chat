@@ -1,7 +1,61 @@
-ion-item {
-    background-color: #787373;
-    color: #f4f5f8;
-    font-weight: bold;
-    padding: 0.5rem;
-    text-transform: uppercase;
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
 }
+
+////////////////////  header  ///////////////////////
+////////////////////  header  //////////////////////
+.list {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.list__items {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    margin: 10px 0;
+    background: linear-gradient(225deg, rgba(142, 5, 194, 0) 0%, rgba(31, 31, 31, 1) 90%);
+}
+
+.list__item-button {
+    background: none;
+    gap: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.list__item-button label {
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.list__item-button ion-icon {
+    font-size: 22px;
+}
+
+.item-note {
+    display: flex;
+    gap: 2vh;
+}
+
+.item-note ion-icon {
+    cursor: pointer;
+}
+
+////////////////////  header  ///////////////////////
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+////////////////////  header  //////////////////////

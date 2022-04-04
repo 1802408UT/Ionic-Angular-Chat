@@ -3,41 +3,31 @@
         <ion-title>Actualizar Habitaciones</ion-title>
     </ion-toolbar>
 </ion-header>
+<!-- HEADER-END -->
+<!-- FORM -->
+<form class="form" [formGroup]="updateUserFg" (ngSubmit)="onSubmit()">
 
+    <div class="form__container-input">
+        <!-- IMPUT numRoom -->
+        <label class="form__label-numRoom" for="email">Numero de habitacion:</label>
+        <input formControlName="numero" placeholder=" " type="numero" id="email" class="form__input" autocomplete="off" required>
+        <!-- IMPUT-END -->
+        <label class="form__label-tipoRoom" for="email">Tipo de habitacion:</label>
+        <input formControlName="tipo" placeholder=" " type="text" id="email" class="form__input" autocomplete="off" required>
+        <!-- IMPUT-END -->
+        <!-- IMPUT statusRoom -->
+        <label class="form__label-statusRoom" for="email">Estatus de la habitacion:</label>
+        <input formControlName="estatus" placeholder=" " type="text" id="email" class="form__input" autocomplete="off" required>
+        <!-- IMPUT-END -->
+        <!-- IMPUT orden -->
+        <label class="form__label-orden" for="email">Orden:</label>
+        <input formControlName="orden" placeholder=" " type="text" id="email" class="form__input" autocomplete="off" required>
+        <!-- IMPUT-END -->
+    </div>
+    <!-- ADD -->
 
-<ion-content>
-    <ion-list lines="full">
-        <form [formGroup]="updateUserFg" (ngSubmit)="onSubmit()">
+    <button class="btn" type="submit">Update</button>
 
-            <ion-item>
-                <ion-label position="floating">Numero de la Habitación</ion-label>
-                <ion-input formControlName="numero" type="text" required></ion-input>
-            </ion-item>
-
-            <ion-item>
-                <ion-label position="floating">Tipo</ion-label>
-                <ion-input formControlName="tipo" type="text" required>
-                </ion-input>
-            </ion-item>
-
-            <ion-item>
-                <ion-label position="floating">Estatus de la habitación</ion-label>
-                <ion-input formControlName="estatus" type="text" required>
-                </ion-input>
-            </ion-item>
-
-            <ion-item>
-                <ion-label position="floating">Orden</ion-label>
-                <ion-input formControlName="Orden" type="text" required>
-                </ion-input>
-            </ion-item>
-
-            <ion-row>
-                <ion-col>
-                    <ion-button type="submit" color="success" expand="block">Update</ion-button>
-                </ion-col>
-            </ion-row>
-
-        </form>
-    </ion-list>
-</ion-content>
+    <!-- ADD-END -->
+</form>
+<!-- FORM-END -->
