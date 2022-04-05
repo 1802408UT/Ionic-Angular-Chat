@@ -29,7 +29,7 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    loadChildren: () => import('./pages/login/login.module').then( m => m.LogingModule)
+    loadChildren: () => import('./login/loginrouting.module').then( m => m.LoginRoutingModule)
   },
   {
     path: 'habitaciones/:habitacionId',
