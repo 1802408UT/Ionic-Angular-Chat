@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterPreloader } from '@angular/router';
 import { HabitacionCrudService } from 'src/app/services/habitacion-crud.service';
 //import { Habitacion } from '../../../models/habitacionmodel';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-habitacion',
@@ -33,6 +34,7 @@ export class HabitacionComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     public habitacionCrudService: HabitacionCrudService,
+    private router: Router
     ) { }
 
   ngOnInit() {
@@ -108,6 +110,8 @@ export class HabitacionComponent implements OnInit {
          alert("Campo no cambiado");
        }
   }
-  
-  }
+  return(){
+    this.router.navigate(['/habitaciones-list']);
+}
+}
 

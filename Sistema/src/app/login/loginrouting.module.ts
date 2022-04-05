@@ -1,14 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HabitacionComponent } from './habitacion.component';
 import { IonicModule } from '@ionic/angular';
-import { HabitacionesListComponent } from '../habitaciones-list.component';
+import { LoginComponent } from '../login/login.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: HabitacionComponent
+    component: LoginComponent
   }
 ];
 
@@ -19,4 +18,4 @@ const routes: Routes = [
     CommonModule],
   exports: [RouterModule],
 })
-export class HabitacionRoutingModule {}
+export class LoginRoutingModule {}

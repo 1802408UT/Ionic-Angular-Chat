@@ -18,6 +18,7 @@ export class ListPage implements OnInit {
   ionViewDidEnter() {
     this.userCrudService.getUsers().subscribe((response) => {
       this.Users = response;
+      console.log(this.Users);
     })
   }
 
