@@ -4,23 +4,27 @@
     </ion-toolbar>
 </ion-header>
 <!-- ///////////////// Header-End  ///////////////////// -->
-<section class="list">
-    <!-- ///////////////// Item  ///////////////////// -->
-    <div class="list__items" *ngFor="let habitacion of Habitaciones">
-        <button class="list__item-button" [routerLink]="['/habitaciones', habitacion.numero]">
+<ion-content style="--background: #121212;">
+    <section class="list">
+        <!-- ///////////////// Item  ///////////////////// -->
+        <div class="container">
+            <div class="list__items" *ngFor="let habitacion of Habitaciones">
+                <button class="list__item-button" [routerLink]="['/habitaciones', habitacion.numero]">
             <ion-icon name="home"></ion-icon>
-            <label>{{habitacion.numero}}</label>
-        </button>
-        <!--////////////////////////////////////////7-->
-        <div class="item-note">
-            <!--////////////////////////////////////////7-->
+            <label>Habitación {{habitacion.numero}}</label>
+            </button>
+                <!--////////////////////////////////////////-->
+                <div class="item-note">
+                    <!--////////////////////////////////////////-->
 
-            <ion-icon clear [routerLink]="['/updatehabitaciones/', habitacion._id]" name="create" style="zoom:1.5"></ion-icon>
+                    <ion-icon clear [routerLink]="['/updatehabitaciones/', habitacion._id]" name="create" style="zoom:1.5"></ion-icon>
 
-            <!--////////////////////////////////////////7-->
-            <ion-icon (click)="removeUser(habitacion, i)" name="trash" style="zoom:1.5"></ion-icon>
-            <!--////////////////////////////////////////7-->
+                    <!--////////////////////////////////////////-->
+                    <ion-icon (click)="removeUser(habitacion, i)" name="trash" style="zoom:1.5"></ion-icon>
+                    <!--////////////////////////////////////////-->
+                </div>
+            </div>
         </div>
-    </div>
-    <!-- ///////////////// Item-End  ///////////////// -->
-</section>
+        <!-- ///////////////// Item-End  ///////////////// -->
+    </section>
+</ion-content>

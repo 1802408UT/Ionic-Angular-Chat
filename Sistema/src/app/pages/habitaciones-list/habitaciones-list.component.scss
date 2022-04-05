@@ -1,3 +1,21 @@
+/*  Color Variables  */
+
+
+/*60%*/
+
+$--Clr-background-light:#1F1F1F;
+$--Clr-background: #121212;
+
+/*30%*/
+
+$--Clr-interface: #fff;
+
+/*10%*/
+
+$--Clr-complement: #8E05C2;
+
+/*  Color Variables-end  */
+
 *,
 *::before,
 *::after {
@@ -10,37 +28,66 @@
 ////////////////////  header  ///////////////////////
 ////////////////////  header  //////////////////////
 .list {
-    height: 100vh;
+    /*    height: 100vh;
     display: flex;
-    flex-direction: column;
-    padding: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;*/
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .list__items {
+    /*width: 350px;
+    height: 280px;
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 8px;
-    margin: 10px 0;
+    margin: 10px 0;*/
     background: linear-gradient(225deg, rgba(142, 5, 194, 0) 0%, rgba(31, 31, 31, 1) 90%);
+    position: relative;
+    cursor: pointer;
+    width: 350px;
+    height: 280px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+    gap: 20px;
 }
 
 .list__item-button {
     background: none;
-    gap: 5px;
+    gap: 15px;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
 .list__item-button label {
-    font-size: 20px;
+    font-size: 35px;
     font-weight: 500;
     cursor: pointer;
 }
 
 .list__item-button ion-icon {
-    font-size: 22px;
+    font-size: 35px;
 }
 
 .item-note {
@@ -49,6 +96,7 @@
 }
 
 .item-note ion-icon {
+    font-size: 30px;
     cursor: pointer;
 }
 
